@@ -1,0 +1,1272 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/AndreasMadsen/article"
+
+    >article (v1.1.2)</a>
+</h1>
+<h4>Analyze a stream of HTML and outsputs the article title, text, and image</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.article">module article</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.article">
+            function <span class="apidocSignatureSpan"></span>article
+            <span class="apidocSignatureSpan">(source, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.super_">
+            function <span class="apidocSignatureSpan">article.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">article.</span>article.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">article.</span>helpers_dom</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">article.</span>helpers_math</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">article.</span>nodes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">article.</span>super_.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.article.article">module article.article</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.article.article">
+            function <span class="apidocSignatureSpan">article.</span>article
+            <span class="apidocSignatureSpan">(source, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.article.super_">
+            function <span class="apidocSignatureSpan">article.article.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.article.article.prototype">module article.article.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.article.prototype._element">
+            function <span class="apidocSignatureSpan">article.article.prototype.</span>_element
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.article.prototype._end">
+            function <span class="apidocSignatureSpan">article.article.prototype.</span>_end
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.article.helpers_dom">module article.helpers_dom</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_dom.buildAttributeMatcher">
+            function <span class="apidocSignatureSpan">article.helpers_dom.</span>buildAttributeMatcher
+            <span class="apidocSignatureSpan">(match)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_dom.commonParent">
+            function <span class="apidocSignatureSpan">article.helpers_dom.</span>commonParent
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_dom.containerOf">
+            function <span class="apidocSignatureSpan">article.helpers_dom.</span>containerOf
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_dom.decodeEntities">
+            function <span class="apidocSignatureSpan">article.helpers_dom.</span>decodeEntities
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_dom.normalizeString">
+            function <span class="apidocSignatureSpan">article.helpers_dom.</span>normalizeString
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_dom.positionRange">
+            function <span class="apidocSignatureSpan">article.helpers_dom.</span>positionRange
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_dom.styleParser">
+            function <span class="apidocSignatureSpan">article.helpers_dom.</span>styleParser
+            <span class="apidocSignatureSpan">(style)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_dom.treeDistance">
+            function <span class="apidocSignatureSpan">article.helpers_dom.</span>treeDistance
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">article.helpers_dom.</span>BLOCK_ELEMENTS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">article.helpers_dom.</span>HEADERS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">article.helpers_dom.</span>IGNORE_TEXT_ELEMENT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">article.helpers_dom.</span>INLINE_STYLE_TAGS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">article.helpers_dom.</span>INLINE_TEXT_TAGS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">article.helpers_dom.</span>NO_TEXT_ELEMENTS</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.article.helpers_math">module article.helpers_math</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_math.ImageSize">
+            function <span class="apidocSignatureSpan">article.helpers_math.</span>ImageSize
+            <span class="apidocSignatureSpan">(width, height)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_math.RangeObject">
+            function <span class="apidocSignatureSpan">article.helpers_math.</span>RangeObject
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_math.adjusedValue">
+            function <span class="apidocSignatureSpan">article.helpers_math.</span>adjusedValue
+            <span class="apidocSignatureSpan">(value, adjust)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_math.adjustedSum">
+            function <span class="apidocSignatureSpan">article.helpers_math.</span>adjustedSum
+            <span class="apidocSignatureSpan">(values, adjust, appear)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_math.average">
+            function <span class="apidocSignatureSpan">article.helpers_math.</span>average
+            <span class="apidocSignatureSpan">(values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.helpers_math.distance">
+            function <span class="apidocSignatureSpan">article.helpers_math.</span>distance
+            <span class="apidocSignatureSpan">(values)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.article.nodes">module article.nodes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.nodes.ElementNode">
+            function <span class="apidocSignatureSpan">article.nodes.</span>ElementNode
+            <span class="apidocSignatureSpan">(parent, tagname, attributes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.nodes.FragmentNode">
+            function <span class="apidocSignatureSpan">article.nodes.</span>FragmentNode
+            <span class="apidocSignatureSpan">(parent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.nodes.RootNode">
+            function <span class="apidocSignatureSpan">article.nodes.</span>RootNode
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.nodes.TextNode">
+            function <span class="apidocSignatureSpan">article.nodes.</span>TextNode
+            <span class="apidocSignatureSpan">(parent, text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.article.super_">module article.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.super_.super_">
+            function <span class="apidocSignatureSpan">article.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.article.super_.prototype">module article.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.super_.prototype._element">
+            function <span class="apidocSignatureSpan">article.super_.prototype.</span>_element
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.super_.prototype._end">
+            function <span class="apidocSignatureSpan">article.super_.prototype.</span>_end
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.article.super_.prototype._write">
+            function <span class="apidocSignatureSpan">article.super_.prototype.</span>_write
+            <span class="apidocSignatureSpan">(chunk, encoding, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.article" id="apidoc.module.article">module article</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.article.article" id="apidoc.element.article.article">
+        function <span class="apidocSignatureSpan"></span>article
+        <span class="apidocSignatureSpan">(source, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Article(source, callback) {
+  if (!(this instanceof Article)) return new Article(source, callback);
+  TreeBuilder.call(this);
+
+  this._source = source;
+  this._callback = callback;
+
+  // Create fase-1 algoritme objects
+  this._fase1title = new Fase1Title(this);
+  this._fase1text = new Fase1Text(this);
+  this._fase1image = new Fase1Image(this);
+
+  // Create fase-2 algoritme objects
+  this._fase2 = new Fase2(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.super_" id="apidoc.element.article.super_">
+        function <span class="apidocSignatureSpan">article.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TreeBuilder() {
+  stream.Writable.call(this);
+  var self = this;
+
+  // Create a root element that all other nodes will be assigned to
+  this._tree = new nodes.RootNode();
+
+  // Temorarry current container variable
+  var lastnode = this._tree;
+
+  this._parser = new Parser({
+    onopentag: function (name, attr) {
+      var node = new nodes.ElementNode(lastnode.element(), name, attr);
+
+      // Append node
+      lastnode = lastnode.append(node);
+    },
+
+    ontext: function (text) {
+      // In theory this can be destructive
+      //   e.q &#x22;Hallo&#x3c;span&#x3e; &#x3c;/span&#x3e;World&#x22; would become HalloWorld
+      // But it seams very unlikely, so until an issue appear this is not going
+      // to change.
+      if (NONE_SPACE_CHAR.test(text) === true) {
+        var node = new nodes.TextNode(lastnode.element(), domHelpers.normalizeString(text));
+
+        // Append node
+        lastnode = lastnode.append(node);
+      }
+    },
+
+    onclosetag: function (tagname) {
+      var node = lastnode.element();
+      lastnode = lastnode.close();
+
+      // Element can not get more children call handler
+      self._element(node);
+    },
+
+    onend: function () {
+      self._tree.close();
+      self._end();
+    }
+  }, {
+    lowerCaseTags: true,
+
+    // This is quite expensive and is done within the attribute matcher
+    lowerCaseAttributeNames: false,
+
+    xmlMode: false
+  });
+
+  this.once(&#x27;finish&#x27;, function () {
+    this._parser.end();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.article.article" id="apidoc.module.article.article">module article.article</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.article.article.article" id="apidoc.element.article.article.article">
+        function <span class="apidocSignatureSpan">article.</span>article
+        <span class="apidocSignatureSpan">(source, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Article(source, callback) {
+  if (!(this instanceof Article)) return new Article(source, callback);
+  TreeBuilder.call(this);
+
+  this._source = source;
+  this._callback = callback;
+
+  // Create fase-1 algoritme objects
+  this._fase1title = new Fase1Title(this);
+  this._fase1text = new Fase1Text(this);
+  this._fase1image = new Fase1Image(this);
+
+  // Create fase-2 algoritme objects
+  this._fase2 = new Fase2(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.article.super_" id="apidoc.element.article.article.super_">
+        function <span class="apidocSignatureSpan">article.article.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TreeBuilder() {
+  stream.Writable.call(this);
+  var self = this;
+
+  // Create a root element that all other nodes will be assigned to
+  this._tree = new nodes.RootNode();
+
+  // Temorarry current container variable
+  var lastnode = this._tree;
+
+  this._parser = new Parser({
+    onopentag: function (name, attr) {
+      var node = new nodes.ElementNode(lastnode.element(), name, attr);
+
+      // Append node
+      lastnode = lastnode.append(node);
+    },
+
+    ontext: function (text) {
+      // In theory this can be destructive
+      //   e.q &#x22;Hallo&#x3c;span&#x3e; &#x3c;/span&#x3e;World&#x22; would become HalloWorld
+      // But it seams very unlikely, so until an issue appear this is not going
+      // to change.
+      if (NONE_SPACE_CHAR.test(text) === true) {
+        var node = new nodes.TextNode(lastnode.element(), domHelpers.normalizeString(text));
+
+        // Append node
+        lastnode = lastnode.append(node);
+      }
+    },
+
+    onclosetag: function (tagname) {
+      var node = lastnode.element();
+      lastnode = lastnode.close();
+
+      // Element can not get more children call handler
+      self._element(node);
+    },
+
+    onend: function () {
+      self._tree.close();
+      self._end();
+    }
+  }, {
+    lowerCaseTags: true,
+
+    // This is quite expensive and is done within the attribute matcher
+    lowerCaseAttributeNames: false,
+
+    xmlMode: false
+  });
+
+  this.once(&#x27;finish&#x27;, function () {
+    this._parser.end();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.article.article.prototype" id="apidoc.module.article.article.prototype">module article.article.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.article.article.prototype._element" id="apidoc.element.article.article.prototype._element">
+        function <span class="apidocSignatureSpan">article.article.prototype.</span>_element
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_element = function (node) {
+  this._fase1title.element(node);
+  this._fase1text.element(node);
+  this._fase1image.element(node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.article.prototype._end" id="apidoc.element.article.article.prototype._end">
+        function <span class="apidocSignatureSpan">article.article.prototype.</span>_end
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_end = function () {
+  try {
+    // Stream ended, perform the last calculations
+    this._fase1title.end();
+    this._fase1text.end();
+    this._fase1image.end();
+
+    // Make the fase-2 algortime fetch title, text and images
+    this._fase2.update();
+
+    // Use the title, text and image algortimes to get the final
+    // best title, image values and text container
+    this._fase2.combine();
+
+    // Remove text noice, this algortimes goes beyond just selecting a text
+    // container
+    this._fase2.reduce();
+
+    // Done calculating send the final result
+    this._callback(null, this._fase2.result());
+  } catch (err) {
+    // Sync error occurred execute callback with error
+    this._callback(err, null);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.article.helpers_dom" id="apidoc.module.article.helpers_dom">module article.helpers_dom</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_dom.buildAttributeMatcher" id="apidoc.element.article.helpers_dom.buildAttributeMatcher">
+        function <span class="apidocSignatureSpan">article.helpers_dom.</span>buildAttributeMatcher
+        <span class="apidocSignatureSpan">(match)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function buildAttributeMatcher(match) {
+  var keys = Object.keys(match);
+  var jskey, i, l;
+
+  var transform = &#x27;&#x27;;
+  var bool = &#x27;&#x27;;
+
+  transform = &#x27;transform = {\n&#x27;;
+  for (i = 0, l = keys.length; i &#x3c; l; i++) {
+    jskey = JSON.stringify(keys[i]);
+
+    transform += &#x27;  &#x27; + jskey + &#x27;: attr.hasOwnProperty(&#x27; + jskey + &#x27;) ? attr[&#x27; + jskey + &#x27;].toLowerCase() : false&#x27;;
+    if (i !== l - 1) transform += &#x27;,&#x27;;
+    transform += &#x27;\n&#x27;;
+  }
+  transform += &#x27;};\n&#x27;;
+
+  bool = &#x27;return !!(&#x27;;
+  for (i = 0, l = keys.length; i &#x3c; l; i++) {
+    jskey = JSON.stringify(keys[i]);
+
+    if (i &#x3e; 0) bool += &#x27;    ||    &#x27;;
+    bool += &#x27; ( transform[&#x27; + jskey + &#x27;]&#x27;;
+
+    if (Array.isArray(match[keys[i]])) {
+      bool += &#x27; &#x26;&#x26; ( &#x27;;
+
+      for (var j = 0, s = match[keys[i]].length; j &#x3c; s; j++) {
+        if (j &#x3e; 0) bool += &#x27; || &#x27;;
+
+        if (typeof match[keys[i]][j] === &#x27;string&#x27;) {
+          bool += &#x27;transform[&#x27; + jskey + &#x27;] === \&#x27;&#x27; + match[keys[i]][j].toLowerCase() + &#x27;\&#x27;&#x27;;
+        } else if (util.isRegExp(match[keys[i]][j])) {
+          bool += &#x27;match[&#x27; + jskey + &#x27;][&#x27; + j + &#x27;].test(transform[&#x27; + jskey + &#x27;])&#x27;;
+        }
+      }
+
+      bool += &#x27; )&#x27;;
+    }
+
+    bool += &#x27; ) \n&#x27;;
+  }
+
+  bool += &#x27;         );&#x27;;
+
+  var anonymous = new Function(&#x27;attr&#x27;, &#x27;match&#x27;, transform + &#x27;\n&#x27; + bool);
+  return function (attr) {
+    return anonymous(attr, match);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_dom.commonParent" id="apidoc.element.article.helpers_dom.commonParent">
+        function <span class="apidocSignatureSpan">article.helpers_dom.</span>commonParent
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function commonParent(a, b) {
+  if (a === b) {
+    return a;
+  } else if (containerOf(a, b)) {
+    return a;
+  } else if (containerOf(b, a)) {
+    return b;
+  } else {
+    // This will happen at some point, since the root is a container of
+    // everything
+    while (b = b.parent) {
+      if (containerOf(b, a)) return b;
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_dom.containerOf" id="apidoc.element.article.helpers_dom.containerOf">
+        function <span class="apidocSignatureSpan">article.helpers_dom.</span>containerOf
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function containerOf(a, b) {
+  while (b = b.parent) {
+    if (a === b) return true;
+  }
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_dom.decodeEntities" id="apidoc.element.article.helpers_dom.decodeEntities">
+        function <span class="apidocSignatureSpan">article.helpers_dom.</span>decodeEntities
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">decodeEntities = function (str){
+		return String(str).replace(re, replacer);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_dom.normalizeString" id="apidoc.element.article.helpers_dom.normalizeString">
+        function <span class="apidocSignatureSpan">article.helpers_dom.</span>normalizeString
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function normalizeString(text) {
+  return entities.decodeHTML5(text).replace(WHITE_SPACE, &#x27; &#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_dom.positionRange" id="apidoc.element.article.helpers_dom.positionRange">
+        function <span class="apidocSignatureSpan">article.helpers_dom.</span>positionRange
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function positionRange(node) {
+  var curr, prev = node;
+  while (curr = lastElementChild(prev)) {
+    prev = curr;
+  }
+
+  return [node.identifyer, prev.identifyer];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_dom.styleParser" id="apidoc.element.article.helpers_dom.styleParser">
+        function <span class="apidocSignatureSpan">article.helpers_dom.</span>styleParser
+        <span class="apidocSignatureSpan">(style)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function styleParser(style) {
+  style = style || &#x27;&#x27;;
+
+  var tokens = style.trim().split(/\s*(?:;|:)\s*/);
+  var output = {};
+  for (var i = 1, l = tokens.length; i &#x3c; l; i += 2) {
+    output[tokens[i - 1]] = tokens[i];
+  }
+  return output;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_dom.treeDistance" id="apidoc.element.article.helpers_dom.treeDistance">
+        function <span class="apidocSignatureSpan">article.helpers_dom.</span>treeDistance
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function treeDistance(a, b) {
+  if (a === b) return 0;
+  var parent = commonParent(a, b);
+
+  var aParent = a;
+  var aCount = 0;
+
+  var bParent = b;
+  var bCount = 0;
+
+  if (parent !== a) {
+    while (parent !== aParent.parent) {
+      aCount += 1;
+      aParent = aParent.parent;
+    }
+  } else {
+    bCount += 1;
+  }
+
+  if (parent !== b) {
+    while (parent !== bParent.parent) {
+      bCount += 1;
+      bParent = bParent.parent;
+    }
+  } else {
+    aCount += 1;
+  }
+
+  var abCount = 0;
+  if (parent !== a &#x26;&#x26; parent !== b) {
+    abCount = Math.abs(
+      parent.children.indexOf(aParent) - parent.children.indexOf(bParent)
+    );
+  }
+
+  return aCount + bCount + abCount;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.article.helpers_math" id="apidoc.module.article.helpers_math">module article.helpers_math</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_math.ImageSize" id="apidoc.element.article.helpers_math.ImageSize">
+        function <span class="apidocSignatureSpan">article.helpers_math.</span>ImageSize
+        <span class="apidocSignatureSpan">(width, height)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ImageSize(width, height) {
+  // width and height are either numbers or null
+	width = (typeof width === &#x27;string&#x27; ? parseInt(width, 10) : Math.ceil(width)) || null;
+	height = (typeof height === &#x27;string&#x27; ? parseInt(height, 10) : Math.ceil(height)) || null;
+
+	if (width &#x26;&#x26; height) {
+		this.width = width;
+		this.height = height;
+	} else if (width) {
+		this.width = width;
+		this.height = Math.ceil(width / GOLDEN_RATIO);
+	} else if (height) {
+		this.width = Math.ceil(height * GOLDEN_RATIO);
+		this.height = height;
+	} else {
+		this.width = null;
+		this.height = null;
+	}
+
+	if (width || height) {
+		this.area = this.width * this.height;
+	} else {
+		this.area = null;
+	}
+
+  if (this.area &#x3e; MAYBE_BANNER_SIZE &#x26;&#x26; width &#x26;&#x26; height) {
+    this.banner = Math.min(
+      Math.abs(GOLDEN_RATIO - (width / height))/GOLDEN_RATIO,
+      Math.abs(GOLDEN_RATIO - (height / width))/GOLDEN_RATIO
+    );
+  } else {
+    this.banner = 0;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_math.RangeObject" id="apidoc.element.article.helpers_math.RangeObject">
+        function <span class="apidocSignatureSpan">article.helpers_math.</span>RangeObject
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RangeObject() {
+  this.max = -Infinity;
+  this.min = Infinity;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_math.adjusedValue" id="apidoc.element.article.helpers_math.adjusedValue">
+        function <span class="apidocSignatureSpan">article.helpers_math.</span>adjusedValue
+        <span class="apidocSignatureSpan">(value, adjust)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function adjusedValue(value, adjust) {
+  // The returned value is between 1 (likely) and 0 (unlikly).
+  return adjust.min === adjust.max ? 1 : zeroDivide(value - adjust.min, adjust.max - adjust.min);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_math.adjustedSum" id="apidoc.element.article.helpers_math.adjustedSum">
+        function <span class="apidocSignatureSpan">article.helpers_math.</span>adjustedSum
+        <span class="apidocSignatureSpan">(values, adjust, appear)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function adjustedSum(values, adjust, appear) {
+  var divider = 0;
+  var sum = 0;
+
+  for (var i = 0, l = adjust.length; i &#x3c; l; i++) {
+    // if min == max, then the likehood can not be calculated because there is
+    // nothing to relate to, so just distribute the likehood evenly by using
+    // the number 0 (meainging very likely)
+    sum += (adjust[i].max === adjust[i].min) ? appear[i] : zeroDivide(
+      appear[i] * (values[i] - adjust[i].min),
+      adjust[i].max - adjust[i].min
+    );
+
+    divider += appear[i];
+  }
+
+  // The returned value is between 1 (likely) and 0 (unlikly).
+  return sum / divider;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_math.average" id="apidoc.element.article.helpers_math.average">
+        function <span class="apidocSignatureSpan">article.helpers_math.</span>average
+        <span class="apidocSignatureSpan">(values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function average(values) {
+  var sum = 0;
+  for (var i = 0, l = values.length; i &#x3c; l; i++) {
+    sum += values[i];
+  }
+
+  return sum / l;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.helpers_math.distance" id="apidoc.element.article.helpers_math.distance">
+        function <span class="apidocSignatureSpan">article.helpers_math.</span>distance
+        <span class="apidocSignatureSpan">(values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function distance(values) {
+  var sum = 0;
+  for (var i = 0, l = values.length; i &#x3c; l; i++) {
+    sum += Math.pow(values[i], 2);
+  }
+
+  return sum;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.article.nodes" id="apidoc.module.article.nodes">module article.nodes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.article.nodes.ElementNode" id="apidoc.element.article.nodes.ElementNode">
+        function <span class="apidocSignatureSpan">article.nodes.</span>ElementNode
+        <span class="apidocSignatureSpan">(parent, tagname, attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ElementNode(parent, tagname, attributes) {
+  Node.call(this, &#x27;element&#x27;, parent);
+
+  // Since this is an element there will minimum one tag
+  this.tags = (tagname === &#x27;br&#x27; || tagname === &#x27;wbr&#x27;) ? 0 : 1;
+
+  // Element nodes also has a tagname and an attribute collection
+  this.tagname = tagname;
+  this.attr = attributes;
+  this.classes = attributes.hasOwnProperty(&#x27;class&#x27;) ?
+    attributes[&#x27;class&#x27;].trim().split(WHITE_SPACE) : [];
+
+  // Add node to the classlist
+  this.root.classlist.addNode(this);
+
+  this._blockySelfCache = domHelpers.BLOCK_ELEMENTS.hasOwnProperty(tagname);
+  this._countTagnames = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.nodes.FragmentNode" id="apidoc.element.article.nodes.FragmentNode">
+        function <span class="apidocSignatureSpan">article.nodes.</span>FragmentNode
+        <span class="apidocSignatureSpan">(parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FragmentNode(parent) {
+  Node.call(this, &#x27;fragment&#x27;, parent);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.nodes.RootNode" id="apidoc.element.article.nodes.RootNode">
+        function <span class="apidocSignatureSpan">article.nodes.</span>RootNode
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RootNode() {
+  Node.call(this, &#x27;root&#x27;, null);
+  this._blockySelfCache = true;
+  this._counter = 0;
+
+  this.classlist = new ClassList();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.nodes.TextNode" id="apidoc.element.article.nodes.TextNode">
+        function <span class="apidocSignatureSpan">article.nodes.</span>TextNode
+        <span class="apidocSignatureSpan">(parent, text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TextNode(parent, text) {
+  Node.call(this, &#x27;text&#x27;, parent);
+
+  // A text node has no children instead it has a text container
+  this.children = null;
+  this._text = text;
+  this._noneStyleText = text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.article.super_" id="apidoc.module.article.super_">module article.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.article.super_.super_" id="apidoc.element.article.super_.super_">
+        function <span class="apidocSignatureSpan">article.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Writable(options) {
+  // Writable ctor is applied to Duplexes, too.
+  // `realHasInstance` is necessary because using plain `instanceof`
+  // would return false, as no `_writableState` property is attached.
+
+  // Trying to use the custom `instanceof` for Writable here will also break the
+  // Node.js LazyTransform implementation, which has a non-trivial getter for
+  // `_writableState` that would lead to infinite recursion.
+  if (!(realHasInstance.call(Writable, this)) &#x26;&#x26;
+      !(this instanceof Stream.Duplex)) {
+    return new Writable(options);
+  }
+
+  this._writableState = new WritableState(options, this);
+
+  // legacy.
+  this.writable = true;
+
+  if (options) {
+    if (typeof options.write === &#x27;function&#x27;)
+      this._write = options.write;
+
+    if (typeof options.writev === &#x27;function&#x27;)
+      this._writev = options.writev;
+  }
+
+  Stream.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.article.super_.prototype" id="apidoc.module.article.super_.prototype">module article.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.article.super_.prototype._element" id="apidoc.element.article.super_.prototype._element">
+        function <span class="apidocSignatureSpan">article.super_.prototype.</span>_element
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_element = function (node) {
+  throw new Error(&#x27;element not implemented&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.super_.prototype._end" id="apidoc.element.article.super_.prototype._end">
+        function <span class="apidocSignatureSpan">article.super_.prototype.</span>_end
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_end = function () {
+  throw new Error(&#x27;end not implemented&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.article.super_.prototype._write" id="apidoc.element.article.super_.prototype._write">
+        function <span class="apidocSignatureSpan">article.super_.prototype.</span>_write
+        <span class="apidocSignatureSpan">(chunk, encoding, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (chunk, encoding, done) {
+  this._parser.write(chunk);
+  done(null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
